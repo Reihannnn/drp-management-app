@@ -15,40 +15,40 @@ Aplikasi desktop untuk manajemen gym yang mendukung:
 
 GYMAPPMANAGEMENT/
 ├── backend/
-│ └── database/
-│ └── db.js
+│   └── database/
+│       └── db.js
 │
-├── node_modules/ -- npm install 
+├── node_modules/                # hasil npm install
 │
-├── public/             -- image or icon folder
-│ └── assets
-|        └── image
-|        └── icon 
+├── public/                      # folder untuk asset publik
+│   └── assets/
+│       ├── image/               # gambar / icon
+│       └── icon/
 │
 ├── src/
-│ ├── components/        -- UI Reusable
-│ │ └── sidebar.html
-│ │
-│ ├── css/
-│ │ └── style.css
-│ │
-│ ├── script/            -- Logic
-│ │ ├── member.js
-│ │ ├── membership.js
-│ │ └── income.js
-│ │
-│ └── views/             -- User interface
-│ ├── dashboard.html
-│ ├── income.html
-│ ├── member.html
-│ └── membership.html
+│   ├── components/              # UI reusable component
+│   │   └── sidebar.html
+│   │
+│   ├── css/
+│   │   └── style.css            # hasil build Tailwind
+│   │
+│   ├── script/                  # logic aplikasi
+│   │   ├── member.js
+│   │   ├── membership.js
+│   │   └── income.js
+│   │
+│   └── views/                   # UI tampilan halaman
+│       ├── dashboard.html
+│       ├── income.html
+│       ├── member.html
+│       └── membership.html
 │
-├── drp-gym-management.db
+├── drp-gym-management.db        # file database SQLite
 │
 ├── index.html
-├── main.js
-├── preload.js
-├── router.js
+├── main.js                      # entry Electron
+├── preload.js                   # IPC bridge
+├── router.js                    # router halaman
 ├── package.json
 └── README.md
 
