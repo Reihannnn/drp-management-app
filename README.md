@@ -1,0 +1,81 @@
+# Gym Management App – Electron.js
+
+Aplikasi desktop untuk manajemen gym yang mendukung:
+
+- CRUD **Member**
+- CRUD **Membership**
+- Pencatatan **Income**
+- Penyimpanan data menggunakan **SQLite3**
+- Antarmuka HTML + **Tailwind CSS (CLI)**
+- Dibangun menggunakan **Electron.js**
+
+---
+
+## 📂 Project Structure
+
+GYMAPPMANAGEMENT/
+├── backend/
+│ └── database/
+│ └── db.js
+│
+├── node_modules/ -- npm install 
+│
+├── public/             -- image or icon folder
+│ └── assets
+|        └── image
+|        └── icon 
+│
+├── src/
+│ ├── components/        -- UI Reusable
+│ │ └── sidebar.html
+│ │
+│ ├── css/
+│ │ └── style.css
+│ │
+│ ├── script/            -- Logic
+│ │ ├── member.js
+│ │ ├── membership.js
+│ │ └── income.js
+│ │
+│ └── views/             -- User interface
+│ ├── dashboard.html
+│ ├── income.html
+│ ├── member.html
+│ └── membership.html
+│
+├── drp-gym-management.db
+│
+├── index.html
+├── main.js
+├── preload.js
+├── router.js
+├── package.json
+└── README.md
+
+
+## 🛠️ Tech Stack
+
+| Teknologi | Keterangan |
+|----------|------------|
+| **Electron.js** | Aplikasi desktop berbasis web |
+| **JavaScript** | Bahasa pemrograman utama |
+| **HTML + Tailwind CSS (CLI)** | UI/Frontend |
+| **SQLite3** | Database lokal ringan |
+| **IPC Electron** | Komunikasi antara frontend & backend |
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+git clone <repository_url>
+
+### 2️⃣ Install Dependencies and node module 
+1. npm install <package>
+2. npm install
+
+### 3️⃣ Build Tailwind (Mode Dev)
+npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch
+
+### 4️⃣ Jalankan Aplikasi Electron
+npm start 
+
+
