@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | DRP Management</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="public/assets/fontawesome/css/all.min.css"
+    />
+  </head>
+  <body class="flex">
+    <!-- sidebar  -->
+    <div class="sidebar"></div>
+    <div id="content"></div>
+    <main class="lg:ml-64 min-h-screen p-8 transition-all duration-300">
+       <div class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-2">Dashboard Management</h1>
+        <p class="text-gray-600">Visualisasi Data Management Gym</p>
+      </div>
+
+      <div class="w-[200px] h-[300px] border bg-red-300">
+          asdas
+      </div>
+
+    </main>    
+  </body>
+
+  <script>
+    fetch("src/components/sidebar.html")
+      .then((res) => res.text())
+      .then((html) => {
+        document.querySelector(".sidebar").innerHTML = html;
+
+        document.getElementById("btn-logout").addEventListener("click", () => {
+          window.api.exitApp();
+        });
+      });
+  </script>
+  <script src="router.js"></script>
+</html>

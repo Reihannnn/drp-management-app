@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | DRP Management</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="flex">
+    <!-- sidebar  -->
+    <div class="sidebar"></div>
+    <div id="content"></div>
+  </body>
+
+  <script>
+    fetch("src/components/sidebar.html")
+      .then((res) => res.text())
+      .then((html) => {
+        document.querySelector(".sidebar").innerHTML = html;
+
+        document.getElementById("btn-logout").addEventListener("click", () => {
+          window.api.exitApp();
+        });
+      });
+  </script>
+  <script src="router.js"></script>
+</html>
