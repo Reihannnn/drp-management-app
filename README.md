@@ -13,44 +13,47 @@ Aplikasi desktop untuk manajemen gym yang mendukung:
 
 ## 📂 Project Structure
 
-GYMAPPMANAGEMENT/
-├── backend/
-│   └── database/
-│       └── db.js
-│
-├── node_modules/                # hasil npm install
-│
-├── public/                      # folder untuk asset publik
-│   └── assets/
-│       ├── image/               # gambar / icon
-│       └── icon/
-│
-├── src/
-│   ├── components/              # UI reusable component
-│   │   └── sidebar.html
-│   │
-│   ├── css/
-│   │   └── style.css            # hasil build Tailwind
-│   │
-│   ├── script/                  # logic aplikasi
-│   │   ├── member.js
-│   │   ├── membership.js
-│   │   └── income.js
-│   │
-│   └── views/                   # UI tampilan halaman
-│       ├── dashboard.html
-│       ├── income.html
-│       ├── member.html
-│       └── membership.html
-│
-├── drp-gym-management.db        # file database SQLite
-│
-├── index.html
-├── main.js                      # entry Electron
-├── preload.js                   # IPC bridge
-├── router.js                    # router halaman
-├── package.json
-└── README.md
+.. code-block:: text
+
+    DRPGYMAPP/
+    ├── backend/                           # Logika backend & database
+    │   └── database/
+    │       └── db.js                      # Koneksi & inisialisasi SQLite3
+    │
+    ├── node_modules/                      # Folder hasil `npm install` (auto generated)
+    │
+    ├── public/                            # File yang bisa diakses langsung (Aset publik)
+    │   └── assets/
+    │       ├── image/                     # Gambar, ilustrasi, foto
+    │       └── icon/                      # Icon aplikasi
+    │
+    ├── src/
+    │   ├── components/                    # UI Reusable components
+    │   │   └── sidebar.html               # Sidebar utama (dipakai di semua halaman)
+    │   │
+    │   ├── css/
+    │   │   └── style.css                  # Hasil build TailwindCSS
+    │   │
+    │   ├── script/                        # Business Logic (Frontend)
+    │   │   ├── member.js                  # CRUD Member
+    │   │   ├── membership.js              # CRUD Membership / perpanjangan
+    │   │   └── income.js                  # Pencatatan pemasukan (Income)
+    │   │
+    │   └── views/                         # Tampilan UI (Frontend HTML)
+    │       ├── dashboard.html             # Halaman dashboard utama
+    │       ├── income.html                # Halaman input & list pemasukan
+    │       ├── member.html                # Halaman CRUD Member
+    │       └── membership.html            # Halaman manajemen membership
+    │
+    ├── drp-gym-management.db              # Database SQLite3
+    │
+    ├── index.html                         # Root HTML aplikasi Electron
+    ├── main.js                            # Entry point Electron (process utama)
+    ├── preload.js                         # Bridge IPC antara frontend dan backend
+    ├── router.js                          # Router simple untuk load halaman HTML
+    ├── package.json                       # Metadata project + dependencies
+    └── README.md                          # Dokumentasi project
+
 
 
 ## 🛠️ Tech Stack
